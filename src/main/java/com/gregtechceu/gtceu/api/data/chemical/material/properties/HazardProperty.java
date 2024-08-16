@@ -12,8 +12,6 @@ import com.gregtechceu.gtceu.common.data.GTMedicalConditions;
 import com.gregtechceu.gtceu.config.ConfigHolder;
 import com.gregtechceu.gtceu.data.recipe.CustomTags;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.util.ExtraCodecs;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.entity.LivingEntity;
@@ -21,6 +19,8 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.ItemStack;
 
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import lombok.Getter;
 import org.jetbrains.annotations.Nullable;
 
@@ -38,8 +38,8 @@ public class HazardProperty implements IMaterialProperty<HazardProperty> {
             MedicalCondition.CODEC.fieldOf("condition").forGetter(val -> val.condition),
             ExtraCodecs.POSITIVE_FLOAT.fieldOf("progression_multiplier")
                     .forGetter(val -> val.progressionMultiplier),
-            Codec.BOOL.fieldOf("apply_to_derivatives").forGetter(val -> val.applyToDerivatives)
-    ).apply(instance, HazardProperty::new));
+            Codec.BOOL.fieldOf("apply_to_derivatives").forGetter(val -> val.applyToDerivatives))
+            .apply(instance, HazardProperty::new));
 
     public MedicalCondition condition;
     public HazardTrigger hazardTrigger;
