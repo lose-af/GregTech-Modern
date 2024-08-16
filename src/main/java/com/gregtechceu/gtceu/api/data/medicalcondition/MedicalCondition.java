@@ -5,6 +5,7 @@ import com.gregtechceu.gtceu.common.capability.MedicalConditionTracker;
 import com.gregtechceu.gtceu.data.recipe.builder.GTRecipeBuilder;
 import com.gregtechceu.gtceu.data.recipe.misc.AirScrubberRecipes;
 
+import com.mojang.serialization.Codec;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.damagesource.DamageScaling;
 import net.minecraft.world.damagesource.DamageSource;
@@ -22,6 +23,7 @@ import java.util.function.Consumer;
 public class MedicalCondition {
 
     public static final Map<String, MedicalCondition> CONDITIONS = new HashMap<>();
+    public static final Codec<MedicalCondition> CODEC = Codec.STRING.xmap(CONDITIONS::get, condition -> condition.name);
 
     public final String name;
     public final int color;

@@ -23,7 +23,6 @@ dependencyResolutionManagement {
         def emiVersion = "1.1.11"
         def ae2Version = "15.0.18"
         def kjsVersion = "2001.6.4-build.120"
-        def auVersion = "1.20.1-0.6.0"
 
         // Forge
         def forgeVersion = "47.1.3"
@@ -33,7 +32,6 @@ dependencyResolutionManagement {
         def topForgeVersion = "1.20.1-10.0.1-3"
         def jadeForgeVersion = "11.6.3"
         def jsonThingsVersion = "0.9.1"
-        def worldStripperForgeFile = "4578579"
         def javdVersion = "4803995"
 
         // Libs
@@ -99,14 +97,8 @@ dependencyResolutionManagement {
             def configuration = version("configuration", configurationVersion)
             library("configuration", "dev.toma.configuration", "configuration-forge-${minecraftVersion}").versionRef(configuration)
 
-            def worldStripper = version("worldStripper", worldStripperForgeFile)
-            library("worldStripper", "curse.maven", "worldStripper-250603").versionRef(worldStripper)
-
             def ae2 = version("ae2", ae2Version)
             library("ae2", "appeng", "appliedenergistics2-forge").versionRef(ae2)
-
-            def au = version("au", auVersion)
-            library("almostUnified-forge", "com.almostreliable.mods", "almostunified-forge").versionRef(au)
 
             def jsonThings = version("jsonThings", jsonThingsVersion)
             library("jsonThings", "dev.gigaherz.jsonthings", "JsonThings-${minecraftVersion}").versionRef(jsonThings)
