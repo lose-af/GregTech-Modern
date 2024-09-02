@@ -23,7 +23,6 @@ dependencyResolutionManagement {
         def emiVersion = "1.1.12"
         def ae2Version = "15.0.18"
         def kjsVersion = "2001.6.4-build.120"
-        def auVersion = "1.20.1-0.6.0"
 
         // Forge
         def forgeVersion = "47.1.3"
@@ -35,6 +34,10 @@ dependencyResolutionManagement {
         def curiosForgeVersion = "5.9.1"
         def worldStripperForgeFile = "4578579"
         def javdVersion = "4803995"
+        def xaerosWorldMapVersion = "5262424" // May not actually be needed
+        def xaerosMinimapVersion = "5262365"
+        def journeyMapVersion = "5678927"
+        def journeyMapApiVersion = "2.0.0"
 
         // Libs
         def quiltMappingsVersion = "5"  // https://lambdaurora.dev/tools/import_quilt.html
@@ -108,8 +111,17 @@ dependencyResolutionManagement {
             def ae2 = version("ae2", ae2Version)
             library("ae2", "appeng", "appliedenergistics2-forge").versionRef(ae2)
 
-            def au = version("au", auVersion)
-            library("almostUnified-forge", "com.almostreliable.mods", "almostunified-forge").versionRef(au)
+            def xaerosWorldMap = version("xaerosWorldMap", xaerosWorldMapVersion)
+            library("xaerosworldmap", "curse.maven", "xaeros-world-map-317780").versionRef(xaerosWorldMap)
+
+            def xaerosMiniMap = version("xaerosMinimap", xaerosMinimapVersion)
+            library("xaerosminimap", "curse.maven", "xaeros-minimap-263420").versionRef(xaerosMiniMap)
+
+            def journeyMapApi = version("journeyMapApi", journeyMapApiVersion + "-" + minecraftVersion + "-SNAPSHOT")
+            library("journeymap-api", "info.journeymap", "journeymap-api-forge").versionRef(journeyMapApi)
+
+            def journeyMap = version("journeyMap", journeyMapVersion)
+            library("journeymap-forge", "curse.maven", "journeymap-32274").versionRef(journeyMap)
 
             def javd = version("javd", javdVersion)
             library("javd", "curse.maven", "javd-370890").versionRef(javd)
