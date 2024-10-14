@@ -307,14 +307,14 @@ public class GTOres {
                     .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE)));
 
     public static final GTOreDefinition SULFUR_VEIN = create("sulfur_vein", vein -> vein
-            .clusterSize(UniformInt.of(32, 40)).density(0.2f).weight(100)
+            .clusterSize(UniformInt.of(36, 48)).density(0.5f).weight(100)
             .layer(WorldGenLayers.NETHERRACK)
             .heightRangeUniform(10, 30)
             .biomes(BiomeTags.IS_NETHER)
             .layeredVeinGenerator(generator -> generator
                     .withLayerPattern(() -> GTLayerPattern.builder(NETHER_RULES)
                             // .layer(l -> l.weight(2).state(Blocks.NETHERRACK::defaultBlockState))
-                            .layer(l -> l.weight(3).mat(Sulfur).size(2, 4))
+                            .layer(l -> l.weight(3).mat(Sulfur).size(3, 6))
                             .layer(l -> l.weight(2).mat(Pyrite).size(1, 1))
                             .layer(l -> l.weight(1).mat(Sphalerite).size(1, 1))
                             .build()))
