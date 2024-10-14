@@ -2919,6 +2919,7 @@
     "gtceu.jei.ore_vein.sulfur_vein":"硫矿脉",
     "gtceu.jei.ore_vein.tetrahedrite_vein":"黝铜矿脉",
     "gtceu.jei.ore_vein.topaz_vein":"黄玉矿脉",
+    "gtceu.jei.ore_vein.nether_coal_vein": "菠萝的妙妙下界煤矿脉",
     "gtceu.jei.ore_vein_diagram":"矿脉生成信息",
     "gtceu.jei.ore_vein_diagram.chance":"§e概率：%s§r",
     "gtceu.jei.ore_vein_diagram.dimensions":"维度：",

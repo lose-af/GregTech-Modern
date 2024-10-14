@@ -359,6 +359,20 @@ public class GTOres {
                     .surfaceRock(Topaz)
                     .placement(SurfaceIndicatorGenerator.IndicatorPlacement.BELOW)));
 
+    public static final GTOreDefinition NETHER_COAL_VEIN = create("nether_coal_vein", vein -> vein
+            .clusterSize(UniformInt.of(32, 40)).density(0.75f).weight(80)
+            .layer(WorldGenLayers.NETHERRACK)
+            .heightRangeUniform(80, 120)
+            .biomes(BiomeTags.IS_NETHER)
+            .layeredVeinGenerator(generator -> generator
+                    .withLayerPattern(() -> GTLayerPattern.builder(NETHER_RULES)
+                            .layer(l -> l.weight(3).mat(Coal).size(1, 4))
+                            .layer(l -> l.weight(3).mat(Coal).size(1, 4))
+                            .build()))
+            .surfaceIndicatorGenerator(indicator -> indicator
+                    .surfaceRock(Coal)
+                    .placement(SurfaceIndicatorGenerator.IndicatorPlacement.BELOW)));
+
     //////////////////////////////////////
     // ***** Overworld Vein *****//
     //////////////////////////////////////

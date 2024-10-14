@@ -2920,6 +2920,7 @@
   "gtceu.jei.ore_vein.sulfur_vein": "Sulfur Vein",
   "gtceu.jei.ore_vein.tetrahedrite_vein": "Tetrahedrite Vein",
   "gtceu.jei.ore_vein.topaz_vein": "Topaz Vein",
+  "gtceu.jei.ore_vein.nether_coal_vein": "Nether Coal Vein",
   "gtceu.jei.ore_vein_diagram": "Ore Vein Diagram",
   "gtceu.jei.ore_vein_diagram.chance": "§eChance: %s§r",
   "gtceu.jei.ore_vein_diagram.dimensions": "Dimensions:",
