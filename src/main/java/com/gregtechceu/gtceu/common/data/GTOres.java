@@ -403,14 +403,14 @@ public class GTOres {
                     .surfaceRock(Cassiterite)));
 
     public static final GTOreDefinition COAL_VEIN = create("coal_vein", vein -> vein
-            .clusterSize(UniformInt.of(38, 44)).density(0.25f).weight(80)
+            .clusterSize(UniformInt.of(32, 40)).density(1.0f).weight(100)
             .layer(WorldGenLayers.STONE)
-            .heightRangeUniform(10, 140)
+            .heightRangeUniform(32, 120)
             .biomes(BiomeTags.IS_OVERWORLD)
             .layeredVeinGenerator(generator -> generator
                     .withLayerPattern(() -> GTLayerPattern.builder(OVERWORLD_RULES)
-                            .layer(l -> l.weight(3).mat(Coal).size(2, 4))
-                            .layer(l -> l.weight(3).mat(Coal).size(2, 4))
+                            .layer(l -> l.weight(3).mat(Coal).size(2, 6))
+                            .layer(l -> l.weight(3).mat(Coal).size(2, 6))
                             .build()))
             .surfaceIndicatorGenerator(indicator -> indicator
                     .surfaceRock(Coal)));
