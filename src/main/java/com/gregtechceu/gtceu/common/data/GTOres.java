@@ -307,14 +307,14 @@ public class GTOres {
                     .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE)));
 
     public static final GTOreDefinition SULFUR_VEIN = create("sulfur_vein", vein -> vein
-            .clusterSize(UniformInt.of(36, 48)).density(0.5f).weight(100)
+            .clusterSize(UniformInt.of(28, 40)).density(0.4f).weight(100)
             .layer(WorldGenLayers.NETHERRACK)
             .heightRangeUniform(10, 30)
             .biomes(BiomeTags.IS_NETHER)
             .layeredVeinGenerator(generator -> generator
                     .withLayerPattern(() -> GTLayerPattern.builder(NETHER_RULES)
                             // .layer(l -> l.weight(2).state(Blocks.NETHERRACK::defaultBlockState))
-                            .layer(l -> l.weight(3).mat(Sulfur).size(3, 6))
+                            .layer(l -> l.weight(3).mat(Sulfur).size(3, 4))
                             .layer(l -> l.weight(2).mat(Pyrite).size(1, 1))
                             .layer(l -> l.weight(1).mat(Sphalerite).size(1, 1))
                             .build()))
@@ -360,7 +360,7 @@ public class GTOres {
                     .placement(SurfaceIndicatorGenerator.IndicatorPlacement.BELOW)));
 
     public static final GTOreDefinition NETHER_COAL_VEIN = create("nether_coal_vein", vein -> vein
-            .clusterSize(UniformInt.of(32, 40)).density(0.75f).weight(80)
+            .clusterSize(UniformInt.of(32, 36)).density(0.5f).weight(70)
             .layer(WorldGenLayers.NETHERRACK)
             .heightRangeUniform(80, 120)
             .biomes(BiomeTags.IS_NETHER)
@@ -417,14 +417,14 @@ public class GTOres {
                     .surfaceRock(Cassiterite)));
 
     public static final GTOreDefinition COAL_VEIN = create("coal_vein", vein -> vein
-            .clusterSize(UniformInt.of(32, 40)).density(1.0f).weight(100)
+            .clusterSize(UniformInt.of(32, 36)).density(0.65f).weight(100)
             .layer(WorldGenLayers.STONE)
             .heightRangeUniform(32, 120)
             .biomes(BiomeTags.IS_OVERWORLD)
             .layeredVeinGenerator(generator -> generator
                     .withLayerPattern(() -> GTLayerPattern.builder(OVERWORLD_RULES)
-                            .layer(l -> l.weight(3).mat(Coal).size(2, 6))
-                            .layer(l -> l.weight(3).mat(Coal).size(2, 6))
+                            .layer(l -> l.weight(3).mat(Coal).size(2, 4))
+                            .layer(l -> l.weight(3).mat(Coal).size(2, 4))
                             .build()))
             .surfaceIndicatorGenerator(indicator -> indicator
                     .surfaceRock(Coal)));
@@ -450,7 +450,7 @@ public class GTOres {
                     .surfaceRock(Chalcopyrite)));
 
     public static final GTOreDefinition GALENA_VEIN = create("galena_vein", vein -> vein
-            .clusterSize(UniformInt.of(36, 48)).density(0.45f).weight(60)
+            .clusterSize(UniformInt.of(32, 48)).density(0.45f).weight(50)
             .layer(WorldGenLayers.STONE)
             .heightRangeUniform(-15, 25)
             .biomes(BiomeTags.IS_OVERWORLD)
@@ -458,7 +458,7 @@ public class GTOres {
                     .withLayerPattern(() -> GTLayerPattern.builder(OVERWORLD_RULES)
                             // .layer(l -> l.weight(2).state(Blocks.STONE::defaultBlockState))
                             .layer(l -> l.weight(3).mat(Galena).size(2, 4))
-                            .layer(l -> l.weight(2).mat(Silver).size(1, 3))
+                            .layer(l -> l.weight(2).mat(Silver).size(1, 2))
                             .layer(l -> l.weight(1).mat(Lead).size(1, 1))
                             .build()))
             .surfaceIndicatorGenerator(indicator -> indicator
