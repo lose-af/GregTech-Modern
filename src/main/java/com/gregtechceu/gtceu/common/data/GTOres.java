@@ -436,15 +436,15 @@ public class GTOres {
                     .surfaceRock(Chalcopyrite)));
 
     public static final GTOreDefinition GALENA_VEIN = create("galena_vein", vein -> vein
-            .clusterSize(UniformInt.of(32, 40)).density(0.25f).weight(40)
+            .clusterSize(UniformInt.of(36, 48)).density(0.45f).weight(60)
             .layer(WorldGenLayers.STONE)
-            .heightRangeUniform(-15, 45)
+            .heightRangeUniform(-15, 25)
             .biomes(BiomeTags.IS_OVERWORLD)
             .layeredVeinGenerator(generator -> generator
                     .withLayerPattern(() -> GTLayerPattern.builder(OVERWORLD_RULES)
                             // .layer(l -> l.weight(2).state(Blocks.STONE::defaultBlockState))
                             .layer(l -> l.weight(3).mat(Galena).size(2, 4))
-                            .layer(l -> l.weight(2).mat(Silver).size(1, 1))
+                            .layer(l -> l.weight(2).mat(Silver).size(1, 3))
                             .layer(l -> l.weight(1).mat(Lead).size(1, 1))
                             .build()))
             .surfaceIndicatorGenerator(indicator -> indicator
